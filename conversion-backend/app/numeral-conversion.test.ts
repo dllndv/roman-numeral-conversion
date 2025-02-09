@@ -74,3 +74,8 @@ Deno.test("2000 through max number", () => {
   const four = convertNumber(3999);
   assertEquals(four, "MMMCMXCIX");
 });
+
+// Todo: Add tests for errors
+// above 3999
+// below 1
+// Input that's not a number

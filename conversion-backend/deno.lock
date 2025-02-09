@@ -2,6 +2,7 @@
   "version": "4",
   "specifiers": {
     "jsr:@oak/commons@1": "1.0.0",
+    "jsr:@oak/oak@*": "17.1.4",
     "jsr:@oak/oak@^17.1.4": "17.1.4",
     "jsr:@std/assert@*": "1.0.11",
     "jsr:@std/assert@1": "1.0.11",
@@ -13,6 +14,7 @@
     "jsr:@std/internal@^1.0.5": "1.0.5",
     "jsr:@std/media-types@1": "1.1.0",
     "jsr:@std/path@1": "1.0.8",
+    "jsr:@tajpouria/cors@*": "1.2.1",
     "jsr:@tajpouria/cors@^1.2.1": "1.2.1",
     "npm:path-to-regexp@^6.3.0": "6.3.0"
   },

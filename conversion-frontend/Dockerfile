@@ -1,13 +1,14 @@
-FROM denoland/deno:2.1.9
+FROM node:22.13.1-alpine3.21
 
-# The port that your application listens to.
+ENV NODE_VERSION 22.13.1
+
 EXPOSE 3000
 
 WORKDIR /app
 
 COPY package*.json ./
-RUN deno install
+RUN yarn install
 
 COPY . .
 
-CMD ["deno", "run", "--allow-net", "--allow-read", "--allow-env", "dev"]
+CMD ["yarn", "run", "dev"]

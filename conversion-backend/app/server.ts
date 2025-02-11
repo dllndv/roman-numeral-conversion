@@ -13,14 +13,20 @@ const appServer = () => {
 
     if (!query) {
       ctx.response.status = 400;
-      ctx.response.body = { error: "query is required" };
+      ctx.response.body = { error: "query is required." };
       return;
     }
-    const romanNumeral = convertNumber(+query);
-    ctx.response.body = {
-      message: `Converted ${query} to roman numerals`,
-      data: romanNumeral,
-    };
+    try {
+      const romanNumeral = convertNumber(+query);
+      ctx.response.body = {
+        message: `Converted ${query} to roman numerals`,
+        data: romanNumeral,
+      };
+      // deno-lint-ignore no-explicit-any
+    } catch (error: any) {
+      ctx.response.status = error.statusCode;
+      ctx.response.body = { error: error.message };
+    }
   });
 
   const app = new Application();

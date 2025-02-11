@@ -1,4 +1,10 @@
+import { CustomError } from "./CustomError.ts";
+
 const convertNumber = (numToConvert: number) => {
+  if (numToConvert > 3999 || numToConvert < 1) {
+    throw new CustomError("Number to convert is out of bounds.", 400);
+  }
+
   enum digits {
     ones,
     tens,

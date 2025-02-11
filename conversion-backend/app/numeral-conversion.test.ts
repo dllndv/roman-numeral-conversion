@@ -1,5 +1,6 @@
-import { assertEquals } from "jsr:@std/assert";
+import { assertEquals, assertThrows } from "jsr:@std/assert";
 import { convertNumber } from "./numeral-conversion.ts";
+import { CustomError } from "./CustomError.ts";
 
 Deno.test("1 through 10", () => {
   const one = convertNumber(1);
@@ -75,7 +76,15 @@ Deno.test("2000 through max number", () => {
   assertEquals(four, "MMMCMXCIX");
 });
 
-// Todo: Add tests for errors
-// above 3999
-// below 1
-// Input that's not a number
+Deno.test("Throws error for out of bounds numbers", () => {
+  assertThrows(
+    () => convertNumber(0),
+    CustomError,
+    "Number to convert is out of bounds."
+  );
+  assertThrows(
+    () => convertNumber(4000),
+    CustomError,
+    "Number to convert is out of bounds."
+  );
+});

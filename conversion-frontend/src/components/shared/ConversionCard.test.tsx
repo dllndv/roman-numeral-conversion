@@ -40,4 +40,16 @@ describe("Conversion Card", () => {
     await userEvent.click(screen.getByText("Convert to Roman Numeral"));
     expect(mockConvertFunction).toHaveBeenCalledWith(123);
   });
+
+  /* There are more tests that could be made here, but given time constraints,
+  I've opted to keep it simple. Here's more test cases that would be useful
+  for full coverage:
+
+  - test field validation works when number field is left empty. Validation
+  message should display, and convert function should not be called.
+  - test user is not able to input a number that is out of the 1-3999 bounds
+  - test presence of toast on success
+  - test presence of toast on failure
+  
+  */
 });

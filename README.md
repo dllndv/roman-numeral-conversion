@@ -58,6 +58,17 @@ deno has built in testing and can be run with `deno test`. `deno lint` to check 
 
 To demonstrate how easy I've made it to add more conversion components, here's a [PR](https://github.com/dllndv/roman-numeral-conversion/pull/4) with one that I whipped up in about 10 mins.
 
+## Features to Add
+
+During planning and development there were a few ideas that I was excited to implement, but I ultimately decided to limit the scope in order to meet the deadline and/or not waste time adding things that were too far outside my experience. Here's a list of some of those things:
+
+- Metrics and monitoring through Graphana or rollup
+- i18n support (thought it would be fun to put a toggle switch that would translate all the text into latin)
+- Flagsmith feature flag support
+- Module Federation for micro-frontend support
+- Playwright for end to end testing
+- Setting up an actual deploy to a hosted server on PR merge
+
 ## Note about comments
 
 I normally don't put this many comments in my code, preferring to write code clear enough to be understandable on its own. But given that this is an assessment for a job interview, I felt over-explaining is better than under-explaining.

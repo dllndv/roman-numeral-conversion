@@ -1,11 +1,11 @@
 import "./App.css";
 import { defaultTheme, Provider } from "@adobe/react-spectrum";
-import { NumeralConversion } from "./components/numeral-conversion/NumeralConversion";
+import { RomanNumeralConversion } from "./components/roman-numeral-conversion/RomanNumeralConversion";
 
 function App() {
   return (
     <Provider theme={defaultTheme}>
-      <NumeralConversion />
+      <RomanNumeralConversion />
     </Provider>
   );
 }

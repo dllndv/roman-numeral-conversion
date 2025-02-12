@@ -1,7 +1,11 @@
 import { Form, NumberField, Button } from "@adobe/react-spectrum";
-import { romanNumeralConversion } from "../../utils/number-conversion-api";
 import { useState } from "react";
 import { styled } from "styled-components";
+
+export type ConversionReturnType = {
+  message: string;
+  data: string;
+};
 
 type ConversionCardParams = {
   title: string;
@@ -9,6 +13,7 @@ type ConversionCardParams = {
   outputLabel: string;
   minimumValue: number;
   maximumValue: number;
+  conversionFunction: (numToConvert: number) => Promise<ConversionReturnType>;
 };
 
 const ConversionCard = ({
@@ -17,12 +22,13 @@ const ConversionCard = ({
   outputLabel,
   minimumValue,
   maximumValue,
+  conversionFunction,
 }: ConversionCardParams) => {
   const [numToConvert, setNumToConvert] = useState(1);
   const [numberConvertResult, setNumberConvertResult] = useState("");
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const conversionResult = await romanNumeralConversion(numToConvert);
+    const conversionResult = await conversionFunction(numToConvert);
     setNumberConvertResult(conversionResult.data);
   };
 
@@ -36,6 +42,7 @@ const ConversionCard = ({
         justifySelf={"left"}
       >
         <NumberField
+          data-testid="number-field"
           label="Number to convert"
           name="numToConvert"
           minValue={minimumValue}

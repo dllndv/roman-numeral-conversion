@@ -1,18 +1,12 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-
-# This workflow will install Deno then run `deno lint` and `deno test`.
-# For more information see: https://github.com/denoland/setup-deno
-
-name: Deno
+name: Deno Backend Tests
 
 on:
   push:
     branches: ["main"]
   pull_request:
     branches: ["main"]
+    merge_group:
+    types: [checks_requested]
 
 permissions:
   contents: read

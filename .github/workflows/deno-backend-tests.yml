@@ -1,5 +1,7 @@
 name: Deno Backend Tests
 
+jobs: backend tests
+
 on:
   push:
     branches: ["main"]

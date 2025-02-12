@@ -1,5 +1,7 @@
 name: Yarn Frontend Tests
 
+jobs: frontend tests
+
 on:
   push:
     branches: ["main"]

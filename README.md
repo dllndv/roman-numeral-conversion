@@ -53,3 +53,7 @@ It can also be run using the Dockerfile:
 ### Testing
 
 deno has built in testing and can be run with `deno test`. `deno lint` to check linting
+
+## Note about comments
+
+I normally don't put this many comments in my code, preferring to write code clear enough to be understandable on its own. But given that this is an assessment for a job interview, I felt over-explaining is better than under-explaining.

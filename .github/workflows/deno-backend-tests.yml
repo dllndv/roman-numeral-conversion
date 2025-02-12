@@ -17,6 +17,10 @@ on:
 permissions:
   contents: read
 
+defaults:
+  run:
+    working-directory: ./conversion-backend
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -30,9 +34,6 @@ jobs:
         uses: denoland/setup-deno@61fe2df320078202e33d7d5ad347e7dcfa0e8f31 # v1.1.2
         with:
           deno-version: v1.x
-
-      - name: Change to backend directory
-        run: cd /conversion-backend
 
       # Uncomment this step to verify the use of 'deno fmt' on each commit.
       # - name: Verify formatting

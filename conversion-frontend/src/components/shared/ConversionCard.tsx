@@ -29,9 +29,14 @@ const ConversionCard = ({
   const [numberConvertResult, setNumberConvertResult] = useState("");
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const conversionResult = await conversionFunction(numToConvert);
-    setNumberConvertResult(conversionResult.data);
-    ToastQueue.positive(conversionResult.message, { timeout: 5000 });
+    try {
+      const conversionResult = await conversionFunction(numToConvert);
+      setNumberConvertResult(conversionResult.data);
+      ToastQueue.positive(conversionResult.message, { timeout: 5000 });
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    } catch (error: any) {
+      ToastQueue.negative(error.message, { timeout: 5000 });
+    }
   };
 
   return (

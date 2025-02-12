@@ -1,6 +1,7 @@
 import axios from "axios";
 import type { ConversionReturnType } from "../components/shared/ConversionCard";
 
+// shared send function for future expandability
 const sendConversionRequest = async (
   numToConvert: number,
   conversionType: string
@@ -19,10 +20,13 @@ const sendConversionRequest = async (
     return conversionResult.data;
   } catch (error) {
     console.error(error);
-    throw error;
+    throw new Error(
+      `Conversion of ${numToConvert} to ${conversionType} failed`
+    );
   }
 };
 
+// This one specifically handles roman numeral conversion
 const romanNumeralConversion = async (
   numToConvert: number
 ): Promise<ConversionReturnType> => {

@@ -1,6 +1,8 @@
 import { ConversionCard } from "../shared/ConversionCard";
 import { romanNumeralConversion } from "../../utils/number-conversion-api";
 
+// This uses a shared component to handle the user interface so that part can
+// be used to make more conversion components later
 const RomanNumeralConversion = () => {
   return (
     <ConversionCard

@@ -4,6 +4,7 @@ import { convertNumber } from "./numeral-conversion.ts";
 const router = new Router();
 
 const appServer = () => {
+  // test route at root, could be used for a health check
   router.get("/", (ctx) => {
     ctx.response.body = "Hello World!";
   });

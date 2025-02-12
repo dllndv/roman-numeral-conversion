@@ -1,6 +1,6 @@
-import { CustomError } from "./CustomError.ts";
+import { CustomError } from "../../utils/CustomError.ts";
 
-const convertNumber = (numToConvert: number) => {
+const convertNumber = (numToConvert: number): string => {
   // First, throw an error if the number happens to be out of bounds
   if (numToConvert > 3999 || numToConvert < 1) {
     throw new CustomError("Number to convert is out of bounds.", 400);

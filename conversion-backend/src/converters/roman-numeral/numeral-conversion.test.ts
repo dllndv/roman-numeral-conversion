@@ -1,6 +1,6 @@
 import { assertEquals, assertThrows } from "jsr:@std/assert";
-import { convertNumber } from "./numeral-conversion.ts";
-import { CustomError } from "./CustomError.ts";
+import { convertNumber } from "../../converters/roman-numeral/numeral-conversion.ts";
+import { CustomError } from "../../utils/CustomError.ts";
 
 Deno.test("1 through 10", () => {
   const one = convertNumber(1);

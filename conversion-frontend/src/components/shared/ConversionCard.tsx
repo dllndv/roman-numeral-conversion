@@ -14,7 +14,9 @@ type ConversionCardParams = {
   outputLabel: string;
   minimumValue: number;
   maximumValue: number;
-  conversionFunction: (numToConvert: number) => Promise<ConversionReturnType>;
+  conversionFunction: (
+    numToConvert: number | undefined
+  ) => Promise<ConversionReturnType>;
 };
 
 const ConversionCard = ({
@@ -25,7 +27,7 @@ const ConversionCard = ({
   maximumValue,
   conversionFunction,
 }: ConversionCardParams) => {
-  const [numToConvert, setNumToConvert] = useState(1);
+  const [numToConvert, setNumToConvert] = useState<number>();
   const [numberConvertResult, setNumberConvertResult] = useState("");
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();

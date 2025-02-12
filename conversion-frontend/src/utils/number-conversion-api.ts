@@ -28,8 +28,11 @@ const sendConversionRequest = async (
 
 // This one specifically handles roman numeral conversion
 const romanNumeralConversion = async (
-  numToConvert: number
+  numToConvert: number | undefined
 ): Promise<ConversionReturnType> => {
+  if (!numToConvert) {
+    throw new Error("number to convert cannot be undefined");
+  }
   const romanNumeralConversionResult = await sendConversionRequest(
     numToConvert,
     "romannumeral"

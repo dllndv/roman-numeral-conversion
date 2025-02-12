@@ -24,4 +24,10 @@ describe("conversion api tests", () => {
     const romanNumeralResult = await romanNumeralConversion(123);
     expect(romanNumeralResult).toEqual(romanNumeralConversionResult);
   });
+
+  it("should throw when undefined is passed", async () => {
+    await expect(() => romanNumeralConversion(undefined)).rejects.toThrowError(
+      "number to convert cannot be undefined"
+    );
+  });
 });

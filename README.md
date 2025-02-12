@@ -54,6 +54,10 @@ It can also be run using the Dockerfile:
 
 deno has built in testing and can be run with `deno test`. `deno lint` to check linting
 
+## Adding Converters
+
+To demonstrate how easy I've made it to add more conversion components, here's a [PR](https://github.com/dllndv/roman-numeral-conversion/pull/4) with one that I whipped up in about 10 mins.
+
 ## Note about comments
 
 I normally don't put this many comments in my code, preferring to write code clear enough to be understandable on its own. But given that this is an assessment for a job interview, I felt over-explaining is better than under-explaining.

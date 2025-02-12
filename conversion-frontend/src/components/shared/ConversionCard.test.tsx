@@ -36,7 +36,7 @@ describe("Conversion Card", () => {
   it("should call conversion function when form submitted", async () => {
     renderComponent();
     await screen.findByTestId("number-field");
-    await userEvent.type(screen.getByTestId("number-field"), "23");
+    await userEvent.type(screen.getByTestId("number-field"), "123");
     await userEvent.click(screen.getByText("Convert to Roman Numeral"));
     expect(mockConvertFunction).toHaveBeenCalledWith(123);
   });

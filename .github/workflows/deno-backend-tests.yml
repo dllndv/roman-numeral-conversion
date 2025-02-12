@@ -16,8 +16,8 @@ defaults:
     working-directory: ./conversion-backend
 
 jobs:
-  name: backend tests
   test:
+    name: backend tests
     runs-on: ubuntu-latest
 
     steps:

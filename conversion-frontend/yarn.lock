@@ -1060,6 +1060,16 @@
     "@react-types/shared" "^3.27.0"
     "@swc/helpers" "^0.5.0"
 
+"@react-aria/landmark@3.0.0-beta.18":
+  version "3.0.0-beta.18"
+  resolved "https://registry.yarnpkg.com/@react-aria/landmark/-/landmark-3.0.0-beta.18.tgz#7d8316d9d6e2a918f26d4fe571193a4b36c79346"
+  integrity sha512-jFtWL7TYZrKucWNDx6ppUkGSqS2itkjhyLo9MIFqEg2mi4Lc2EoUjI/Gw9xMT+IJgebTcdQeXJpPskspl3Pojg==
+  dependencies:
+    "@react-aria/utils" "^3.27.0"
+    "@react-types/shared" "^3.27.0"
+    "@swc/helpers" "^0.5.0"
+    use-sync-external-store "^1.2.0"
+
 "@react-aria/link@^3.7.8":
   version "3.7.8"
   resolved "https://registry.yarnpkg.com/@react-aria/link/-/link-3.7.8.tgz#26813464e1adf443ede93ce44d7e2d4a3510d25c"
@@ -1351,6 +1361,20 @@
     "@react-stately/utils" "^3.10.5"
     "@react-types/shared" "^3.27.0"
     "@react-types/textfield" "^3.11.0"
+    "@swc/helpers" "^0.5.0"
+
+"@react-aria/toast@3.0.0-beta.19":
+  version "3.0.0-beta.19"
+  resolved "https://registry.yarnpkg.com/@react-aria/toast/-/toast-3.0.0-beta.19.tgz#9711e3541b925c61fff22d9d10ce76e47706b1a5"
+  integrity sha512-LCMTcmSmum5CzBk+DIec66q6pJGEl+InQPJdsby7QG/row0ka6wHPvul78HVseN7dzg6G3xVjvHtVPOixkuegA==
+  dependencies:
+    "@react-aria/i18n" "^3.12.5"
+    "@react-aria/interactions" "^3.23.0"
+    "@react-aria/landmark" "3.0.0-beta.18"
+    "@react-aria/utils" "^3.27.0"
+    "@react-stately/toast" "3.0.0-beta.7"
+    "@react-types/button" "^3.10.2"
+    "@react-types/shared" "^3.27.0"
     "@swc/helpers" "^0.5.0"
 
 "@react-aria/toggle@^3.10.11":
@@ -2264,6 +2288,24 @@
     "@react-types/provider" "^3.8.6"
     "@swc/helpers" "^0.5.0"
 
+"@react-spectrum/toast@^3.0.0-beta.18":
+  version "3.0.0-beta.18"
+  resolved "https://registry.yarnpkg.com/@react-spectrum/toast/-/toast-3.0.0-beta.18.tgz#0c61db36baba74e5f4aaf455a23ca5c6bd1f21d1"
+  integrity sha512-n1Ym+gXKC0htaPb3bYWwPORVEh5EGbx83I9WC2GIf6mvv7bxFn9UkmbO3CzXt1Y/NCBbv5YhJWO5e2gup3Wq3A==
+  dependencies:
+    "@react-aria/focus" "^3.19.1"
+    "@react-aria/i18n" "^3.12.5"
+    "@react-aria/overlays" "^3.25.0"
+    "@react-aria/toast" "3.0.0-beta.19"
+    "@react-aria/utils" "^3.27.0"
+    "@react-spectrum/button" "^3.16.10"
+    "@react-spectrum/utils" "^3.12.1"
+    "@react-stately/toast" "3.0.0-beta.7"
+    "@react-types/shared" "^3.27.0"
+    "@spectrum-icons/ui" "^3.6.12"
+    "@swc/helpers" "^0.5.0"
+    use-sync-external-store "^1.2.0"
+
 "@react-spectrum/tooltip@^3.7.1":
   version "3.7.1"
   resolved "https://registry.yarnpkg.com/@react-spectrum/tooltip/-/tooltip-3.7.1.tgz#e0e94021295c2455fad3d2b00e5754d37ccb42ee"
@@ -2580,6 +2622,14 @@
     "@react-types/shared" "^3.27.0"
     "@react-types/tabs" "^3.3.12"
     "@swc/helpers" "^0.5.0"
+
+"@react-stately/toast@3.0.0-beta.7":
+  version "3.0.0-beta.7"
+  resolved "https://registry.yarnpkg.com/@react-stately/toast/-/toast-3.0.0-beta.7.tgz#104e629848daf8a2ad172104708e3b2dbe7f2872"
+  integrity sha512-+KDkaOS5Y4ApOfiP0HHij4ySwAd1VM9/pI4rVTyHrzkp0R2Q0eBxZ74MpWMpVfJa2lSjb/qEm60tqJ3A+4R/cQ==
+  dependencies:
+    "@swc/helpers" "^0.5.0"
+    use-sync-external-store "^1.2.0"
 
 "@react-stately/toggle@^3.8.1":
   version "3.8.1"

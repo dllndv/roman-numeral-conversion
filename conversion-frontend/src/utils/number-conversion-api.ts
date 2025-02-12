@@ -40,4 +40,18 @@ const romanNumeralConversion = async (
   return romanNumeralConversionResult;
 };
 
-export { romanNumeralConversion };
+// And this one handles Binary
+const binaryNumberConversion = async (
+  numToConvert: number | undefined
+): Promise<ConversionReturnType> => {
+  if (!numToConvert) {
+    throw new Error("number to convert cannot be undefined");
+  }
+  const binaryNumberConversionResult = await sendConversionRequest(
+    numToConvert,
+    "binary"
+  );
+  return binaryNumberConversionResult;
+};
+
+export { romanNumeralConversion, binaryNumberConversion };

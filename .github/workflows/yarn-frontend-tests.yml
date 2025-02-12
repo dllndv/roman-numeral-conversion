@@ -25,6 +25,8 @@ jobs:
         uses: DerYeger/yarn-setup-action@master
         with:
           node-version: 22
+
+      - name: Run install
         run: yarn install
 
       - name: Run linter
